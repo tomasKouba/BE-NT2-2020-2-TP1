@@ -1,6 +1,6 @@
 const classNames = {
   TODO_ITEM: 'todo-container',
-  TODO_CHECKBOX: 'todo-checkbox',
+  TODO_CHECKBOX: 'todo-container',
   TODO_TEXT: 'todo-text',
   TODO_DELETE: 'todo-delete',
 }
@@ -18,7 +18,7 @@ function addTodo() {
   item.textContent = "Nueva Tarea";
   item.className = 'todo-text';
   item2.type = "checkbox";
-  item2.className = 'todo-checkbox';
+  item2.className = classNames.TODO_CHECKBOX;
   item2.onclick = function () {
     if (item2.checked){
       itemCountSpan.innerText++;
@@ -29,7 +29,7 @@ function addTodo() {
     }
   };
   list.append(item);
-  item.appendChild(item2);
+  item.append(item2);
   
 }
 
