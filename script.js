@@ -14,17 +14,16 @@ function addTodo() {
   let item = document.createElement('li');
   let item2 = document.createElement("input");
   uncheckedCountSpan.innerText++;
+  itemCountSpan.innerText++;
   //let contador = itemCountSpan;
   item.textContent = "Nueva Tarea";
   item.className = 'todo-text';
   item2.type = "checkbox";
   item2.className = classNames.TODO_CHECKBOX;
   item2.onclick = function () {
-    if (item2.checked){
-      itemCountSpan.innerText++;
+    if (item2.checked){      
       uncheckedCountSpan.innerText--;
-    } else if (!item2.checked) {
-      itemCountSpan.innerText--;
+    } else if (!item2.checked) {      
       uncheckedCountSpan.innerText++;
     }
   };
