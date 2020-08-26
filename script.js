@@ -16,8 +16,8 @@ function addTodo() {
   uncheckedCountSpan.innerText++;
   itemCountSpan.innerText++;
   //let contador = itemCountSpan;
-  item.textContent = "Nueva Tarea";
-  item.className = 'todo-text';
+  item.innerText = "Tarea N:" + itemCountSpan.innerText;
+  item.className = classNames.TODO_TEXT;
   item2.type = "checkbox";
   item2.className = classNames.TODO_CHECKBOX;
   item2.onclick = function () {
